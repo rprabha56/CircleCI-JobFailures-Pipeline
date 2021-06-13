@@ -6,10 +6,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: exit 1
-      - run:
-          name: JobStepError
-          command: echo "There was a job step error"
-          when: on_fail
+      - run: 
+             command: echo "There was a job error"
+             when: on_fail
 workflows:
   welcome:
     jobs:
