@@ -5,11 +5,10 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "ThisJobWillFail",
-             exit 1
+      - run: exit 1
       - run:
-          name: Show Job Execution Error
-          command: echo "There was a job execution error"
+          name: JobStepError
+          command: echo "There was a job step error"
           when: on_fail
 workflows:
   welcome:
